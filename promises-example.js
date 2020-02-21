@@ -25,3 +25,11 @@ var queryUSDAFarmersMarkets = (zipCode) => {
     });
   });
 };
+
+queryUSDAFarmersMarkets(10004)
+  .then((respBody)=>{
+    console.log('response', JSON.parse(respBody))
+  })
+  .then(null, (error) => {
+    console.log('error: ', err)
+  })
